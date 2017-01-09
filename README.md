@@ -4,8 +4,7 @@ In many of my projects I extensively use simple sql queries to work with data. M
 
 In this repository blog, I am going to present few simple customer/salesperson tables and write some sql queries show casing the usage of group by, join clause.
 
-**Salesperson**  
-
+##### Salesperson  
 SalespersonID | Name | Age | Salary
 ------------- | ---- | --- | ------
 1 | Alice | 61 | 140000
@@ -15,8 +14,7 @@ SalespersonID | Name | Age | Salary
 11 | Emmit | 57 | 115000
 16 | Fred | 38 | 38000
 
-**Customer**    
-
+#####  Customer  
 CustomerID | Name
 ---------- | ----
 4 | George
@@ -24,8 +22,7 @@ CustomerID | Name
 7 | Ingrid
 11 | Jerry
 
-**Orders**
-
+##### Orders
 OrderID | OrderDate | CustomerID | SalespersonID | NumberOfUnits | CostOfUnit
 ------- | --------- | ----------- | ------------ | ------------- | ----------
 3 | 17/01/2013 | 4 | 2 | 4 | 400
@@ -38,6 +35,7 @@ OrderID | OrderDate | CustomerID | SalespersonID | NumberOfUnits | CostOfUnit
 
 **Return the names of all salespeople that
 have an order with George**
+
 ```sql
 --Return the names of all salespeople that have an order with George
 
@@ -72,6 +70,7 @@ on t2.SalespersonID=t3.SalespersonID
 
 **Return the names of all salespeople that do
 not have any order with George**
+
 ```sql
 -- Return the names of all salespeople that do not have any order with George
 
@@ -93,8 +92,10 @@ where UPPER(Name)=UPPER('George')
 )
 )
 ```
+
 **Return the names of salespeople that have
 2 or more orders**
+
 ```sql
 --Return the names of salespeople that have 2 or more orders.
 select t2.Name as 'sales people that have 2 or more orders' from
@@ -118,6 +119,7 @@ on t1.SalespersonID=t2.SalespersonID and t1.NumOfOrders > 1
 
 **Return the name of the salesperson with
 the 3rd highest salary.**
+
 ```sql
 --Return the name of the salesperson with the 3rd highest salary.
 
@@ -137,6 +139,7 @@ columns are CustomerID,
 TotalOrderValue), and insert into that table
 customers whose total Amount across all
 orders is greater than 1000**
+
 ```sql
 --Create a new rollup table BigOrders(where columns are CustomerID, TotalOrderValue), and insert into that table
 --customers whose total Amount across all orders is greater than 1000
@@ -155,6 +158,7 @@ where t1.TotalOrderValue > 1000
 **Return the total Amount of orders for each
 month, ordered by year, then month (both
 in descending order)**
+
 ```sql
 --Return the total Amount of orders for each month, ordered by year, then month (both in descending order)
 
