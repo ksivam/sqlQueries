@@ -38,6 +38,7 @@ OrderID | OrderDate | CustomerID | SalespersonID | NumberOfUnits | CostOfUnit
 
 **Return the names of all salespeople that
 have an order with George**
+
 ```sql
 --Return the names of all salespeople that have an order with George
 
