@@ -4,7 +4,8 @@ In many of my projects I extensively use simple sql queries to work with data. M
 
 In this repository blog, I am going to present few simple customer/salesperson tables and write some sql queries show casing the usage of group by, join clause.
 
-##### Salesperson  
+### Salesperson  
+
 SalespersonID | Name | Age | Salary
 ------------- | ---- | --- | ------
 1 | Alice | 61 | 140000
@@ -14,7 +15,8 @@ SalespersonID | Name | Age | Salary
 11 | Emmit | 57 | 115000
 16 | Fred | 38 | 38000
 
-#####  Customer  
+###  Customer  
+
 CustomerID | Name
 ---------- | ----
 4 | George
@@ -22,7 +24,8 @@ CustomerID | Name
 7 | Ingrid
 11 | Jerry
 
-##### Orders
+### Orders
+
 OrderID | OrderDate | CustomerID | SalespersonID | NumberOfUnits | CostOfUnit
 ------- | --------- | ----------- | ------------ | ------------- | ----------
 3 | 17/01/2013 | 4 | 2 | 4 | 400
